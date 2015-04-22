@@ -8,7 +8,7 @@ int main()
 {
 	int letters = 8;
 
-	char a[15] = { 'f', 'o', 'l', 'l', 'l', 'l', 'l', 'l'};
+	char a[15] = { 'f', 'o', 'l', 'l', 'l', 'l', 'l', 'e'};
 
 	delete_repeats( a, letters );
 
@@ -31,16 +31,8 @@ void delete_repeats( char a[], int& letters )
 		{
 			if( a[i - 1] == a[x] )
 			{
-				for( int y = x; y < letters; y++ )
-				{
-					a[y] = a[y + 1];
-				}
-
-				letters -= 1;
+				a[x] = 0;
 			}
 		}
 	}
-
-	a[letters - 1] = 0;
-	
 }
